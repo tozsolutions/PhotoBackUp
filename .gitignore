@@ -16,3 +16,6 @@ venv/
 public/
 .backups/
 .tmp/
+Originals/
+tmp_demo/
+/sample.tgz
