@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "photobackup"
+version = "0.1.0"
+description = "Local Google Photos Takeout import and deduplication tool"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "tozsolutions" }
+]
+keywords = ["photos", "backup", "google-photos", "takeout", "deduplication"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: System :: Archiving :: Backup",
+  "Topic :: Utilities",
+]
+
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/tozsolutions/PhotoBackUp"
+Repository = "https://github.com/tozsolutions/PhotoBackUp"
+Issues = "https://github.com/tozsolutions/PhotoBackUp/issues"
+
+[project.scripts]
+photobackup = "photobackup.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/photobackup"]
+
