@@ -21,7 +21,13 @@ classifiers = [
   "Topic :: Utilities",
 ]
 
-dependencies = []
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.6",
+  "python-multipart>=0.0.9",
+  "aiofiles>=23.2.1",
+  "requests>=2.32.3",
+]
 
 [project.urls]
 Homepage = "https://github.com/tozsolutions/PhotoBackUp"
@@ -30,6 +36,7 @@ Issues = "https://github.com/tozsolutions/PhotoBackUp/issues"
 
 [project.scripts]
 photobackup = "photobackup.cli:main"
+photobackup-server = "photobackup.server:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/photobackup"]
