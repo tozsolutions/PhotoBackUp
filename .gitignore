@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.build/
+.dist/
+.venv/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Local artifacts
+public/
+.backups/
+.tmp/
+Originals/
+tmp_demo/
+/sample.tgz
