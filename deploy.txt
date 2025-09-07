@@ -1,0 +1,173 @@
+# FOTOĞRAF YEDEKLEMe SİSTEMİ - NETLIFY DEPLOY REHBERİ
+
+## 🌐 NETLIFY'DE YAYINLAMA REHBERİ
+
+### ADIM 1: NETLIFY HESABI OLUŞTURMA
+1. https://netlify.com adresine gidin
+2. "Sign up" (Kaydol) butonuna tıklayın
+3. GitHub, GitLab veya email ile hesap açın
+4. Email ile açıyorsanız:
+   - Email adresinizi yazın
+   - Güçlü bir şifre oluşturun
+   - "Create account" butonuna basın
+5. Email'inizi kontrol edin ve doğrulama linkine tıklayın
+
+### ADIM 2: GITHUB'DA PROJE OLUŞTURMA
+1. https://github.com adresine gidin
+2. Hesabınız yoksa ücretsiz hesap açın
+3. "New repository" (Yeni depo) butonuna tıklayın
+4. Repository adını yazın: "photo-backup-app"
+5. "Public" seçeneğini işaretleyin
+6. "Create repository" butonuna tıklayın
+
+### ADIM 3: KODU GITHUB'A YÜKLEMe
+1. Bilgisayarınızda proje klasörünü açın
+2. Tüm dosyaları seçin (Ctrl+A)
+3. Sıkıştırılmış dosya oluşturun (.zip)
+4. GitHub'da oluşturduğunuz repository'ye gidin
+5. "uploading an existing file" linkine tıklayın
+6. Zip dosyasını sürükleyip bırakın
+7. "Commit changes" butonuna tıklayın
+
+### ADIM 4: NETLIFY'DE DEPLOY ETME
+1. Netlify hesabınıza giriş yapın
+2. "New site from Git" butonuna tıklayın
+3. "GitHub" seçeneğini seçin
+4. GitHub hesabınıza bağlanmaya izin verin
+5. Repository listenizden "photo-backup-app"ı seçin
+6. Deploy ayarları:
+   - **Branch to deploy**: main
+   - **Build command**: npm run build
+   - **Publish directory**: dist
+7. "Deploy site" butonuna tıklayın
+
+### ADIM 5: DEPLOY TAMAMLANMASINI BEKLEYIN
+1. Deploy işlemi 2-5 dakika sürer
+2. Yeşil "Published" yazısını görene kadar bekleyin
+3. Hata varsa "Deploy log"u kontrol edin
+4. Başarılı olursa sitenizin linkini göreceksiniz
+
+## 🔧 DEPLOY AYARLARI
+
+### Build Ayarları Kontrolü:
+1. Site dashboard'unda "Site settings" tıklayın
+2. "Build & deploy" menüsüne gidin
+3. Şu ayarların doğru olduğunu kontrol edin:
+   - **Repository**: GitHub'daki repository adresiniz
+   - **Base directory**: boş bırakın
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+
+### Environment Variables (Gerekirse):
+1. "Site settings" > "Build & deploy" > "Environment variables"
+2. Özel ayarlar gerekiyorsa buradan ekleyin
+3. Şu anki proje için gerekli değil
+
+## 🌍 ÖZEL DOMAIN BAĞLAMA
+
+### Ücretsiz Netlify Domain:
+- Otomatik olarak `random-name-123.netlify.app` şeklinde domain alırsınız
+- Bu domain ücretsizdir ve çalışır
+
+### Kendi Domain'inizi Bağlama:
+1. Domain satın alın (GoDaddy, Namecheap, vb.)
+2. Netlify'de "Domain settings" > "Add custom domain"
+3. Domain adınızı yazın (örn: benimsite.com)
+4. DNS ayarlarını yapın:
+
+**DNS Ayarları:**
+- Domain sağlayıcınızın paneline gidin
+- DNS ayarları bölümünü bulun
+- Şu kayıtları ekleyin:
+  - **Type**: CNAME
+  - **Name**: www
+  - **Value**: your-site-name.netlify.app
+  - **Type**: A
+  - **Name**: @
+  - **Value**: 75.2.60.5
+
+### SSL Sertifikası:
+1. Netlify otomatik olarak SSL sertifikası sağlar
+2. "Domain settings" > "HTTPS" bölümünde kontrol edin
+3. "Force HTTPS" seçeneğini açın
+
+## 🔄 OTOMATİK GÜNCELLEME
+
+### GitHub ile Otomatik Deploy:
+1. GitHub'da kod değişikliği yaptığınızda
+2. Netlify otomatik olarak yeni versiyonu deploy eder
+3. Bu işlem 2-5 dakika sürer
+4. Email ile bildirim alırsınız
+
+### Manuel Deploy:
+1. Netlify dashboard'unda "Deploys" sekmesine gidin
+2. "Trigger deploy" > "Deploy site" tıklayın
+3. Manuel olarak yeniden deploy eder
+
+## 📊 SİTE İSTATİSTİKLERİ
+
+### Netlify Analytics:
+1. "Site overview" sayfasında temel istatistikleri görürsünüz
+2. Ziyaretçi sayısı, sayfa görüntülemeleri
+3. Detaylı analitik için Google Analytics ekleyebilirsiniz
+
+### Performance Monitoring:
+1. Site hızını "Site overview"da görebilirsiniz
+2. Optimize edilmiş dosyalar otomatik olarak sunulur
+3. CDN ile dünya çapında hızlı erişim
+
+## 🚨 SORUN GİDERME
+
+### Deploy Başarısız Olursa:
+1. "Deploy log"u kontrol edin
+2. Hata mesajlarını okuyun
+3. Genelde build command veya dosya yolu hatası olur
+4. GitHub'daki dosyaları kontrol edin
+
+### Site Açılmıyorsa:
+1. Deploy'un tamamlandığından emin olun
+2. Domain ayarlarını kontrol edin
+3. DNS değişiklikleri 24 saat sürebilir
+4. Farklı tarayıcıdan deneyin
+
+### Dosyalar Güncellenmiyor:
+1. Browser cache'ini temizleyin (Ctrl+F5)
+2. Deploy logunu kontrol edin
+3. GitHub'da değişikliklerin yüklendiğinden emin olun
+
+## 💡 İPUÇLARI
+
+### Güvenlik:
+- Netlify otomatik olarak HTTPS sağlar
+- Güvenlik duvarı koruması vardır
+- DDoS koruması mevcuttur
+
+### Performans:
+- Dosyalar otomatik olarak sıkıştırılır
+- CDN ile hızlı yükleme
+- Mobil optimizasyonu otomatik
+
+### Backup:
+- GitHub'da kodlarınız güvende
+- Netlify'de deploy geçmişi saklanır
+- İstediğiniz zaman eski versiyona dönebilirsiniz
+
+## 📞 DESTEK
+
+### Netlify Desteği:
+- https://docs.netlify.com - Dokümantasyon
+- Community forum mevcut
+- Pro plan ile email destek
+
+### GitHub Desteği:
+- https://docs.github.com - Dokümantasyon
+- Community forum
+- Ücretsiz hesaplar için sınırlı destek
+
+**ÖNEMLİİ NOTLAR:**
+- İlk deploy 5-10 dakika sürebilir
+- DNS değişiklikleri 24 saat sürebilir
+- Ücretsiz plan aylık 100GB bandwidth sağlar
+- SSL sertifikası otomatik olarak yenilenir
+
+Bu rehberi takip ederek sitenizi başarıyla yayınlayabilirsiniz!

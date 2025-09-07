@@ -1,0 +1,109 @@
+# FOTOĞRAF YEDEKLEMe SİSTEMİ - KURULUM REHBERİ
+
+## 📱 TELEFON KURULUMU (iOS ve Android)
+
+### Adım 1: Uygulamayı Açın
+1. Telefonunuzun internet tarayıcısını açın (Safari, Chrome, vb.)
+2. Size verilen web adresini yazın
+3. Uygulamayı açın
+
+### Adım 2: Uygulamayı Ana Ekrana Ekleyin
+**iPhone için:**
+1. Safari'de uygulamayı açın
+2. Alt kısımdaki "Paylaş" butonuna basın (kare içinde yukarı ok)
+3. "Ana Ekrana Ekle" seçeneğini bulun ve basın
+4. "Ekle" butonuna basın
+
+**Android için:**
+1. Chrome'da uygulamayı açın
+2. Sağ üst köşedeki 3 nokta menüsüne basın
+3. "Ana ekrana ekle" veya "Uygulama yükle" seçeneğini bulun
+4. "Ekle" butonuna basın
+
+### Adım 3: WiFi Bağlantısını Kontrol Edin
+1. Telefonunuzun WiFi'sinin açık olduğundan emin olun
+2. Bilgisayarınızla aynı WiFi ağına bağlı olduğunuzu kontrol edin
+3. WiFi adı (ağ ismi) aynı olmalı
+
+## 💻 BİLGİSAYAR KURULUMU (Windows)
+
+### Adım 1: Klasör Hazırlığı
+1. Masaüstünde sağ tıklayın
+2. "Yeni" > "Klasör" seçin
+3. Klasör adını "Telefon Yedekleri" yapın
+4. Bu klasörün içinde şu alt klasörleri oluşturun:
+   - "Fotoğraflar"
+   - "Videolar"
+   - "Belgeler"
+
+### Adım 2: Ağ Ayarları
+1. Windows tuşu + R'ye basın
+2. "cmd" yazın ve Enter'a basın
+3. Açılan pencerede "ipconfig" yazın ve Enter'a basın
+4. "IPv4 Address" yazan yerdeki numarayı not edin (örn: 192.168.1.100)
+
+### Adım 3: Güvenlik Duvarı Ayarları
+1. Windows Ayarlar'ı açın (Windows tuşu + I)
+2. "Güncelleme ve Güvenlik" > "Windows Güvenliği"
+3. "Güvenlik Duvarı ve ağ koruması"
+4. "Özel ağ" altında güvenlik duvarının açık olduğundan emin olun
+
+## 🔄 OTOMATİK YEDEKLEME NASIL ÇALIŞIR
+
+### Telefon Tarafında:
+1. Uygulamayı açın
+2. "Cihazları Tara" butonuna basın
+3. Bilgisayarınız listede görünecek
+4. Bilgisayarınıza tıklayın
+5. "Yedeklemeyi Başlat" butonuna basın
+
+### Yedekleme Süreci:
+- Fotoğraflar otomatik olarak tarih klasörlerine ayrılır
+- Videolar ayrı klasörde saklanır
+- Aynı dosya iki kez yedeklenmez (tekrar önleme)
+- Yedekleme sırasında telefonu kullanmaya devam edebilirsiniz
+
+## 💾 YEREL DEPOLAMA AYARLARI
+
+### Depolama Seçenekleri:
+1. **Tarayıcı Hafızası**: Geçici depolama, tarayıcı kapanınca silinir
+2. **Yerel Depolama**: Kalıcı depolama, veriler saklanır
+
+### Yerel Depolamayı Açmak:
+1. Uygulamada "Ayarlar" sekmesine gidin
+2. "Yerel Depolamayı Etkinleştir" butonuna basın
+3. Tarayıcı izin isteyecek, "İzin Ver" deyin
+
+## 🔧 SORUN GİDERME
+
+### Telefon Bilgisayarı Görmüyorsa:
+1. Her iki cihazın da aynı WiFi'ye bağlı olduğunu kontrol edin
+2. WiFi router'ını yeniden başlatın (fişten çekip takın)
+3. Telefonda uygulamayı kapatıp tekrar açın
+4. "Cihazları Tara" butonuna tekrar basın
+
+### Yedekleme Çok Yavaşsa:
+1. Diğer uygulamaları kapatın
+2. WiFi sinyalinin güçlü olduğu yere geçin
+3. Router'a daha yakın durun
+
+### Dosyalar Görünmüyorsa:
+1. Bilgisayarda "Telefon Yedekleri" klasörünü kontrol edin
+2. Tarih klasörlerinin içine bakın
+3. Yedekleme tamamlanana kadar bekleyin
+
+## 📞 YARDIM
+
+Sorun yaşarsanız:
+1. Uygulamayı tamamen kapatıp tekrar açın
+2. Telefonu yeniden başlatın
+3. WiFi bağlantısını kontrol edin
+4. Bu rehberi tekrar okuyun
+
+**ÖNEMLİ NOTLAR:**
+- İlk yedekleme uzun sürebilir (fotoğraf sayısına göre)
+- Telefon şarjda olsun
+- WiFi bağlantısı stabil olsun
+- Yedekleme sırasında uygulamayı kapatmayın
+
+Bu rehber sizin için hazırlanmıştır. Adım adım takip ederseniz sorunsuz çalışacaktır.
